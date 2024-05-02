@@ -1,14 +1,17 @@
-using System;
+﻿using FitnessApp.Data;
 using System.ComponentModel.DataAnnotations;
 
 namespace FitnessApp.Models
 {
-    public class Workouts
+    public class Workouts : IEntity
     {
-        public int WorkoutsID { get; set; }
+        [Key]
+        public int Id { get; set; }
+
         public string Title { get; set; }
+
         public string Description { get; set; }
+
         public string DifficultyLevel { get; set; }
-        public Trainers Trainers { get; set; }
     }
 }
